@@ -22,12 +22,21 @@ class Solution {
             return false;
 
         }
-        let i = 0;
-
-        while (s.length > i) { 
 
 
+        // Create a hashmap 
+        var map = {};
 
+        // Loop through the first string
+        for (let char of s) {
+            map[char] = (map[char] || 0) + 1;
+        }
+
+        for (let char of t) {
+            if (!map[char]) {
+                return false;
+            }
+            map[char] -= 1;
         }
     };
 }
