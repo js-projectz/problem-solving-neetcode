@@ -25,7 +25,8 @@ class Solution {
 
 
         // Create a hashmap 
-        var map = {};
+        const map = {};
+      
 
         // Loop through the first string
         for (let char of s) {
@@ -38,6 +39,9 @@ class Solution {
             }
             map[char] -= 1;
         }
+        return true;
+
+
     };
 }
 
