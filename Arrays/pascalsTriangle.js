@@ -12,20 +12,23 @@
 
 var generate = function (numRows) {
 
-    if (numRows === 0) return [];
+    if (numRows === 0) return [[]];
 
-    const result = [];
+    const triangle = [];
 
     for (let i = 0; i < numRows; i++) {
-        let row = [1]; // First element is always 1
-        for (let j = 1; j < i; j++) {
-            row.push(result[i - 1][j - 1] + result[i - 1][j]); // Middle elements are sum of previous row's j-1 and jth elements
+        var row = [];
+        for (let j = 0; j <= i; j++) {
+            if (j === 0 || j === i) { // first element is always 1 also last element
+                row.push(1);
+            }
+            else {
+                row.push(triangle[i - 1][j - 1] + triangle[i - 1][j]);
+            }
         }
-        if (i > 0) row.push(1); // Last element is always 1
-        result.push(row);
+        triangle.push(row);
     }
-
-    return result;
+    return triangle;
 };
 
 const numRows = 5;
