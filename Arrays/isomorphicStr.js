@@ -4,17 +4,27 @@
  * @return {boolean}
  */
 var isIsomorphic = function (s, t) {
+    if (s.length !== t.length) return false;
 
-    // Validation
-    if (!s.length || !t.length) return false;
+    let mapST = {}; // Mapping from s -> t
+    let mapTS = {}; // Mapping from t -> s
 
-    // add the first key and value in obj
-    let obj = { [t[0]]: s[0] };
-    console.log(obj);
+    for (let i = 0; i < s.length; i++) {
+        let charS = s[i];
+        let charT = t[i];
+
+        // Check if s -> t mapping exists and is consistent
+        if (mapST[charS] && mapST[charS] !== charT) return false;
+        if (mapTS[charT] && mapTS[charT] !== charS) return false;
+
+        mapST[charS] = charT;
+        mapTS[charT] = charS;
+    }
 
     return true;
 };
 
-const s = 'egg';
-const t = 'add';
-console.log(isIsomorphic(s, t));
+console.log(isIsomorphic("egg", "add"));
+console.log(isIsomorphic("foo", "bar"));
+console.log(isIsomorphic("paper", "title"));
+console.log(isIsomorphic("ab", "aa")); 
