@@ -4,13 +4,6 @@
  */
 var pivotIndex = function (nums) {
 
-    /**
-     * Input: nums = [1,2,3]
-Output: -1
-Explanation:
-There is no index that satisfies the conditions in the problem statement.
-     */
-
     if (nums.length === 0) return 0;
 
     let totalSum = nums.reduce((a, b) => a + b, 0);
@@ -19,7 +12,7 @@ There is no index that satisfies the conditions in the problem statement.
 
     for (let i = 0; i < nums.length; i++) {
 
-        var rightSum = totalSum - leftSum - nums[i]; // 6 - 1 - 2 = 3
+        var rightSum = totalSum - (leftSum + nums[i]); // 6 - 1 - 2 = 3
         // console.log('right-sum', rightSum);
 
 
