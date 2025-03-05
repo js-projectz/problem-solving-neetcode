@@ -8,9 +8,11 @@ var largestGoodInteger = function (num) {
 
     let max = '';
 
-    for (let i = 0; i < num.length - 3; i++) {
+    for (let i = 0; i <= num.length - 3; i++) {
         // get the substring in string
         const triplet = num.substring(i, i + 3);
+        console.log('triplet', triplet);
+
         if (triplet[0] === triplet[1] && triplet[1] === triplet[2]) {
             if (triplet > max) {
                 max = triplet;
@@ -21,4 +23,4 @@ var largestGoodInteger = function (num) {
     return max;
 };
 
-console.log(largestGoodInteger("2300019"));
+console.log(largestGoodInteger("222"));
