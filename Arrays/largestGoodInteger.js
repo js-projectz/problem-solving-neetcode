@@ -4,24 +4,21 @@
  */
 var largestGoodInteger = function (num) {
 
-
     if (!num.length) return "";
 
-    let ans = "";
-    for (let i = 0; i < num.length; i++) {
-        let str = "";
+    let max = '';
 
-        if (num[i] === num[i + 1]) {
-            if (num[i + 1] === num[i + 2]) {
-                str += num.slice(i, i + 3);
-
+    for (let i = 0; i < num.length - 3; i++) {
+        // get the substring in string
+        const triplet = num.substring(i, i + 3);
+        if (triplet[0] === triplet[1] && triplet[1] === triplet[2]) {
+            if (triplet > max) {
+                max = triplet;
             }
-            ans = str;
-            break;
+            else if (triplet === max) max = triplet;
         }
-
     }
-    return ans;
+    return max;
 };
 
-console.log(largestGoodInteger("1221000"));
+console.log(largestGoodInteger("2300019"));
