@@ -17,8 +17,8 @@ var findErrorNums = function (nums) {
             }
         }
     };
-
     return [res, res + 1];
 };
 
 console.log(findErrorNums([1, 2, 2, 4]));
+  
