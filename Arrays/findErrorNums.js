@@ -14,7 +14,7 @@ var findErrorNums = function (nums) {
             if (nums[i] === nums[j]) {
                 res = nums[i];
                 break;
-            }
+            }   
         }
     };
     return [res, res + 1];
