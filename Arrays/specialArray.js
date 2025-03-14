@@ -7,7 +7,9 @@ var specialArray = function (nums) {
     let n = nums.length;
 
     for (let x = 1; x <= n; x++) {
-        let count = nums.filter(num => num >= x).length; 
+        let count = nums.filter(num => num >= x).length;
+        console.log(count);
+
         if (count === x) return x;
     }
 
