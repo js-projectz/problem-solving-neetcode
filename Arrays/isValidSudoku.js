@@ -4,7 +4,7 @@
  */
 var isValidSudoku = function (board) {
 
-    let rows = new Set();
+    let rows = new Set();   
     let cols = new Set();
     let boxes = new Set();
 
