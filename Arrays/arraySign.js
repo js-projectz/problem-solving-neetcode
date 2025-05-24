@@ -11,6 +11,7 @@ var arraySign = function (nums) {
     for (let num of nums) {
         if (num === 0) return 0;
         if (num > 0) sign *= 1;
+        if (num < 0) sign *= -1;
     }
 
     return sign;
