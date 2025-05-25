@@ -7,7 +7,6 @@
  * @author Meganathan
  */
 
-
 const largestElementInMatix = (matrix) => {
     let largest = matrix[0][0];
 
