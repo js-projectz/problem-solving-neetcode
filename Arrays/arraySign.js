@@ -16,5 +16,4 @@ var arraySign = function (nums) {
 
     return sign;
 };
-
 console.log(arraySign([1, 5, 1, 2, -3]));

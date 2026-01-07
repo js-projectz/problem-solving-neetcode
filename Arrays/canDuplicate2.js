@@ -20,6 +20,7 @@ var containsNearbyDuplicate = function (nums, k) {
     }
 
     return false;
+    
 };
 
 console.log(containsNearbyDuplicate([1, 2, 3, 1], 3)); 
