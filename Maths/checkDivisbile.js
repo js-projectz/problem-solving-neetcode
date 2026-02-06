@@ -8,5 +8,6 @@ const checkDivisible = (userInput) => {
     const res = number % 7 === 0 ? 'yes' : 'no';
 
     console.log(res);
+    return res;
 };
 checkDivisible(["14"]);
