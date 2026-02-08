@@ -12,4 +12,7 @@ const middleEleModify = (userInput) => {
     console.log(str.join(""));
 };
 
-middleEleModify(["sadsad"])
+middleEleModify(["sadsad"]);
+
+
+
