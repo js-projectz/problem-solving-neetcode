@@ -5,9 +5,7 @@ const farmAreaCalculation = (userInput) => {
 
     let area = L * W;
 
-    let ans = parseInt(area.toFixed(5));
-
-    console.log(ans);
+    console.log(Number(area.toFixed(5)));
 }
 
 farmAreaCalculation(["1", 10]);
