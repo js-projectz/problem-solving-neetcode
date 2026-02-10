@@ -1,11 +1,13 @@
 const farmAreaCalculation = (userInput) => {
+    let data = userInput[0].split(" ");
 
-    let L = parseInt(userInput[0]);
-    let W = parseInt(userInput[1]);
+    let L = parseFloat(data[0]);
+    let W = parseFloat(data[1]);
 
-    let area = L * W;
+    let area = parseFloat(L * W);
+    let result = Math.floor(area * 100000) / 100000;
 
-    console.log(Number(area.toFixed(5)));
+    console.log(result.toFixed(5));
 }
 
 farmAreaCalculation(["1", 10]);

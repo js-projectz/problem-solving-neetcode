@@ -9,7 +9,6 @@ const findOddDigits = (userInput) => {
     console.log(numArr)
 
     let oddArr = [];
-
     for (let i = 0; i < numArr.length; i++) {
         if (parseInt(numArr[i]) % 2 !== 0) {
             oddArr.push(numArr[i]);
