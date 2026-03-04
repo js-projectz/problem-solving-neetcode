@@ -4,8 +4,17 @@
  */
 var findRelativeRanks = function (score) {
 
-    // validation
-    if (!score.length) return [];
-};
+    let sorted = [...score].sort((a, b) => b - a);
 
-console.log(findRelativeRanks([10, 3, 8, 9, 4]));
+    let map = {};
+
+    for (let i = 0; i < sorted.length; i++) {
+
+        if (i === 0) map[sorted[i]] = "Gold Medal";
+        else if (i === 1) map[sorted[i]] = "Silver Medal";
+        else if (i === 2) map[sorted[i]] = "Bronze Medal";
+        else map[sorted[i]] = (i + 1).toString();
+    }
+
+    return score.map(s => map[s]);
+};
