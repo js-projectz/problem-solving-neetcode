@@ -4,7 +4,7 @@
  */
 var findRelativeRanks = function (score) {
 
-    let sorted = [...score].sort((a, b) => b - a);
+    let sorted = [...score].sort((a, b) => b - a); // copy of original arr
 
     let map = {};
 
