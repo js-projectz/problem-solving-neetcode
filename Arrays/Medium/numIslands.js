@@ -30,11 +30,11 @@ var numIslands = function (grid) {
     for (let i = 0; i < grid.length; i++) {
         for (let j = 0; j < grid[0].length; j++) {
             if (grid[i][j] === '1') {
-                count++;      // new island found
+                count++;    // new island found
                 dfs(i, j);    // remove whole island
             }
         }
     }
 
     return count;
-};
+};  
