@@ -15,12 +15,12 @@ function printFloyedTriangle(n) {
     let count = 1;
 
     for (let i = 0; i < n; i++) {
-        let num = '';
+        let row = '';
         for (let j = 0; j <= i; j++) {
-            num += count + " "; // " " = 1 + " " = num = 1
+            row += count + " "; // " " = 1 + " " = num = 1
             count++;
         }
-        console.log(num);
+        console.log(row);
 
     }
 
