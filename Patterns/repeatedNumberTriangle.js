@@ -19,6 +19,8 @@ function printRepeatedNumberTriangle(n) {
             row += (i + 1).toString() + ' ';
         }
         console.log(row);
+
+        
     }
 
 }
