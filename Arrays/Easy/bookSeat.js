@@ -1,29 +1,50 @@
 /**
- * Here the problem is to solve the problem of booking a seat in a theater. The function takes in an array of seats and a seat number to book. It checks if the seat is available and books it if it is, otherwise it returns a message indicating that the seat is already booked.
- * 
- * 
+ * Processes multiple seat booking requests.
+ *
+ * @param {string[]} seats - Array representing seat status
+ *                           ("available" or "booked").
+ * @param {number[]} requests - Array of seat numbers to book.
+ * @returns {void}
  */
+function bookSeats(seats, requests) {
+    for (const seatNumber of requests) {
 
+        // Check if seat number is valid
+        if (seatNumber < 1 || seatNumber > seats.length) {
+            console.log(`Seat ${seatNumber}: Invalid seat number.`);
+            continue;
+        }
 
-function bookSeat(seats, seatNumber) {
-    // Check if the seat number is valid
-    if (seatNumber < 1 || seatNumber > seats.length) {
-        return "Invalid seat number.";
+        // Check if already booked
+        if (seats[seatNumber - 1] === "booked") {
+            console.log(`Seat ${seatNumber}: Already booked.`);
+            continue;
+        }
+
+        // Book the seat
+        seats[seatNumber - 1] = "booked";
+        console.log(`Seat ${seatNumber}: Booked successfully.`);
     }
 
-    // Check if the seat is already booked
-    if (seats[seatNumber - 1] === "booked") {
-        return "Seat " + seatNumber + " is already booked.";
-    }
-
-    // Book the seat
-    seats[seatNumber - 1] = "booked";
-
-    return "Seat " + seatNumber + " has been booked.";
+    console.log("\nFinal Seat Status:");
+    console.log(seats);
 }
 
+// Seats in theater
+const seats = [
+    "available",
+    "booked",
+    "available",
+    "available",
+    "booked",
+    "available",
+    "available",
+    "booked",
+    "available",
+    "available"
+];
 
-const seats = ["available", "available", "available", "available", "available", "available", "available", "available", "available", "available"];
-const seatNumber = 5;
-const result = bookSeat(seats, seatNumber);
-console.log(result);
+// Customer requests
+const requests = [1, 5, 7, 8, 10, 11];
+
+bookSeats(seats, requests);
