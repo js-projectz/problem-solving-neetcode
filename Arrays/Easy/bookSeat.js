@@ -6,6 +6,7 @@
  * @param {number[]} requests - Array of seat numbers to book.
  * @returns {void}
  */
+
 function bookSeats(seats, requests) {
     for (const seatNumber of requests) {
 
@@ -25,8 +26,6 @@ function bookSeats(seats, requests) {
         seats[seatNumber - 1] = "booked";
         console.log(`Seat ${seatNumber}: Booked successfully.`);
     }
-
-    console.log("\nFinal Seat Status:");
     console.log(seats);
 }
 
