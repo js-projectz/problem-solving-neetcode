@@ -29,6 +29,7 @@ function bookSeats(seats, requests) {
     console.log(seats);
 }
 
+
 // Seats in theater
 const seats = [
     "available",
