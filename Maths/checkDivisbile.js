@@ -10,4 +10,5 @@ const checkDivisible = (userInput) => {
     console.log(res);
     return res;
 };
+
 checkDivisible(["14"]);
