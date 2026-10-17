@@ -7,8 +7,6 @@ class Solution {
     isPalindrome(s) {
 
         let str = s.toLocaleLowerCase().trim();
-
-
         let left = 0;
         let right = str.length - 1;
 
@@ -29,7 +27,7 @@ class Solution {
         }
         return true;
     }
-    //
+    // 
     isPalindromeChar(c) {
         return (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9');
     }
