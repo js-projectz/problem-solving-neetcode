@@ -5,42 +5,16 @@ class Solution {
      */
     maxProfit(prices) {
 
-        // find the min prices
-        let minPrice = prices[1]; // 1
-        let minPriceIdx = 0;
-        let maxProfitDay = 0;
-        // = [[3, 4, 1]]
+        let maxProfit = 0;
+        let minPrice = Infinity;
+
         for (let i = 0; i < prices.length; i++) {
-            if (prices[i] < minPrice) { // 2 < 3
-                minPrice = prices[i];
-                // set the min price index
-                minPriceIdx = prices.indexOf(minPrice);
-            }
+            let profit = prices[i] - minPrice; 
 
+            maxProfit = Math.max(maxProfit, profit);
+            minPrice = Math.min(minPrice, prices[i]);
         }
-        if (minPrice === 0) {
-            if (i === prices.length - 1) {
-                minPrice = prices[prices.length - 1];
-                minPriceIdx = prices.length - 1;
-            }
-        }
-
-        console.log('minprice', minPrice);
-        console.log('minpriceidx', minPriceIdx);
-
-
-        // check the boundry before goes to the logic
-        if (prices.length - 1 > minPriceIdx) {
-            for (let j = minPriceIdx; j < prices.length; j++) {
-                if (prices[j + 1] > prices[j]) {
-                    maxProfitDay = prices[j + 1];
-                    console.log("maxprf", maxProfitDay);
-
-                }
-            }
-        }
-
-        return maxProfitDay === 0 ? minPrice : maxProfitDay - minPrice;
+        return maxProfit;
     }
 }
 
