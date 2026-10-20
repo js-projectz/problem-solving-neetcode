@@ -1,8 +1,8 @@
 class Solution {
     /**
-        * @param {string} s
-        * @return {boolean}
-        */
+     * @param {string} s
+     * @return {boolean}
+     */
     // create a method to check if a string is a palindrome
     isPalindrome(s) {
 
@@ -13,11 +13,9 @@ class Solution {
         while (left < right) {
             if (!this.isPalindromeChar(str[left])) {
                 left++;
-            }
-            else if (!this.isPalindromeChar(str[right])) {
+            } else if (!this.isPalindromeChar(str[right])) {
                 right--;
-            }
-            else {
+            } else {
                 if (str[left] !== str[right]) {
                     return false;
                 }
