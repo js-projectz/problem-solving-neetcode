@@ -7,8 +7,6 @@
  * @author Meganathan
  */
 
-
-
 class Binarysearch {
 
     /**
