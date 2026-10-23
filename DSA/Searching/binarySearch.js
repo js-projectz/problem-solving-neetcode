@@ -1,4 +1,3 @@
-
 /**
  * Binary Search is simply for you are give the sorted array and k element 
  * you're task is to find the K element inside the array if there return the index
@@ -14,6 +13,7 @@ class Binarysearch {
      * @param {Array} nums 
      * @param {number} k 
      */
+
     binarySearch(nums, target) {
 
         let left = 0;
@@ -28,8 +28,7 @@ class Binarysearch {
 
             else if (nums[mid] < target) {
                 left = mid + 1;
-            }
-            else {
+            } else {
                 right = mid - 1;
             }
 
