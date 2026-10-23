@@ -17,11 +17,11 @@ class LinearSearch {
      */
     linearSearch(nums, k) {
         for (let i = 0; i < nums.length; i++) {
-            if (nums[i] === k) return                  i;
+            if (nums[i] === k) return i;
         }
         return -1;
 
-    } 
+    }
 };
 
 const soln = new LinearSearch();
