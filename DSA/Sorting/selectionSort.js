@@ -1,12 +1,12 @@
 /**
- * Here the selection sort in the DSA concept you will the select the 
- * small or large value in array and compare with other then swap 
- * 
+ * Here the selection sort in the DSA concept you will the select the
+ * small or large value in array and compare with other then swap
+ *
  * @author Meganathan
  */
 
 function selectionSort(nums) {
-    // [7,2,8,9,4,6]
+    // [7,2,8,9,4      ,6]
 
     const n = nums.length;
     let temp = 0;
@@ -25,9 +25,10 @@ function selectionSort(nums) {
         nums[minIndex] = nums[i];
         nums[i] = temp;
 
-        console.log(nums);
+        console.log(nums[minIndex]);
 
     }
     return nums;
 }
+
 console.log(selectionSort([7, 2, 8, 9, 4, 6]));
