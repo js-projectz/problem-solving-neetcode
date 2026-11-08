@@ -24,4 +24,5 @@ var permute = function (nums) {
     backtrack([]);
     return res;
 };
+
 console.log(permute([1, 2, 3]));
