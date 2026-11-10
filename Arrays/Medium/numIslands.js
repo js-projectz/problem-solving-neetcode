@@ -8,6 +8,7 @@ var numIslands = function (grid) {
     let count = 0;
 
     const dfs = (i, j) => {
+
         // boundary check + water check
         if (
             i < 0 ||
