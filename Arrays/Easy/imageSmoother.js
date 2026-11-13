@@ -18,8 +18,8 @@ var imageSmoother = function (img) {
             let count = 0;
 
 
-            for (let r = i - 1; r <= i + 1; i++) {
-                for (let c = j - 1; j <= j + 1; j++) {
+            for (let r = i - 1; r <= i + 1; r++) {
+                for (let c = j - 1; c <= j + 1; c++) {
 
                     // check the boundary cells
                     if (r >= 0 && r < m && c >= 0 && c < n) {
