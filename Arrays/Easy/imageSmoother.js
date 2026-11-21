@@ -13,10 +13,8 @@ var imageSmoother = function (img) {
     for (let i = 0; i < m; i++) {
         for (let j = 0; j < n; j++) {
 
-
             let sum = 0;
             let count = 0;
-
 
             for (let r = i - 1; r <= i + 1; r++) {
                 for (let c = j - 1; c <= j + 1; c++) {
@@ -26,14 +24,10 @@ var imageSmoother = function (img) {
 
                         sum += img[r][c];
                         count++;
-
                     }
-
                 }
             }
-
             result[i][j] = Math.floor(sum / count);
-
         }
     }
 
