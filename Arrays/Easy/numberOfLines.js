@@ -11,7 +11,7 @@ var numberOfLines = function (widths, s) {
     for (let i = 0; i < s.length; i++) {
         let charWidth = widths[s.charCodeAt(i) - 97];
 
-        if (currentWidth + charWidth > 100) {
+        if (currentWidth + charWidth > 100) { // if curr width greater than 100 
             lines++;
             currentWidth = charWidth;
         } else {
